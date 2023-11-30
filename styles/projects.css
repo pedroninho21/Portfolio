@@ -1,0 +1,30 @@
+.title {
+	margin: 2em 0;
+	text-align: center;
+}
+
+.title p {
+	display: none;
+}
+
+h2 {
+	color: #181818;
+}
+@media screen and (min-width: 768px) {
+	.title p {
+		display: block;
+		font-size: 1em;
+		font-weight: 400;
+		color: #181818;
+		margin: 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	h2 {
+		color: #fff;
+	}
+	.title p {
+		color: white;
+	}
+}

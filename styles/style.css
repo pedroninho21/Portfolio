@@ -1,0 +1,297 @@
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(243, 242, 242);
+}
+
+main {
+	flex-grow: 1;
+}
+
+.profile-picture {
+	border-radius: 50%;
+}
+
+.about {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 2em 0;
+}
+.about header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about header > img {
+	background: linear-gradient(to right, #0f71f2, #318c07, #f2a20c, #d92929);
+	padding: 0.3em;
+}
+
+.about hgroup {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 700;
+	color: #f2a20c;
+	margin: 0;
+}
+
+.about hgroup > p {
+	font-size: 1em;
+	font-weight: 400;
+	color: #868686;
+	margin: 0;
+}
+
+.about hgroup > p a {
+	color: #868686;
+	text-decoration: none;
+	text-decoration: dotted underline;
+	text-underline-offset: 0.2em;
+}
+
+.about .description {
+	color: white;
+	background-color: #0f71f2;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	padding: 1em;
+	text-align: justify;
+
+	margin: 1.8em 0;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #d92929;
+	margin: 0;
+	padding: 0 1em;
+}
+
+.project {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px #868686 dashed;
+	border-right-width: 0;
+	border-left-width: 0;
+	margin: 1em 0;
+	padding: 1em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.project p {
+	display: none;
+}
+.project header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.project h3 {
+	font-size: 1.2em;
+	line-height: 2em;
+	font-weight: 700;
+	color: #181818;
+	margin: 0;
+}
+.project header a {
+	text-decoration: dotted underline;
+	text-underline-offset: 0.2em;
+	text-decoration-color: #181818;
+}
+
+a.button {
+	display: block;
+	padding: 1em 1em;
+	margin: 1em 1em;
+	background-color: #318c07;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+footer {
+	display: flex;
+
+	background-color: #0f71f2;
+	color: white;
+	padding: 0 1em;
+	margin-top: 2em;
+}
+/* BREAKPOINT TABLETTE */
+@media only screen and (min-width: 768px) {
+	main {
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+	}
+	main > * {
+		width: 90vw;
+	}
+
+	.about .description {
+		border-radius: 0.5em;
+	}
+
+	.project {
+		border-right-width: 1px;
+		border-left-width: 1px;
+		border-radius: 0.5em;
+	}
+
+	.project p {
+		display: flex;
+		line-height: 1.25em;
+		text-align: justify;
+	}
+}
+
+/* BREAKPOINT ECRAN LARGE (ordinateur) */
+@media screen and (min-width: 1024px) {
+	main > * {
+		width: 90vw;
+	}
+	.about {
+		display: flex;
+		flex: 0 0 auto;
+		flex-direction: row;
+		align-items: stretch;
+		margin: 4em;
+		gap: 4em;
+	}
+
+	.about header {
+		display: flex;
+
+		justify-content: center;
+		align-items: center;
+		max-width: min-content;
+	}
+
+	.about hgroup {
+		margin: 1.2em 0;
+	}
+
+	.about hgroup > h1 {
+		line-height: 1.5em;
+	}
+	.about hgroup > p {
+		font-size: 1.2em;
+	}
+
+	.about > p {
+		margin: 0;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.3em;
+	}
+
+	h2 {
+		padding: 0;
+	}
+
+	.project {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		gap: 2em;
+		margin: 2em 0;
+		padding: 2em;
+	}
+
+	.project header {
+		display: flex;
+		flex-shrink: 1;
+		flex-grow: 1;
+		max-width: 25%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1em;
+	}
+
+	.project div {
+		flex-grow: 3;
+	}
+}
+
+@media (prefers-contrast: more) {
+	.about hgroup h1 {
+		color: black;
+	}
+	.about hgroup p {
+		color: black;
+	}
+	.about > p {
+		color: black;
+		background-color: #0f71f222;
+		padding: 1em;
+		text-align: justify;
+
+		margin: 1.8em 0;
+	}
+	h2 {
+		color: black;
+	}
+	.about hgroup > p a {
+		color: black;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html,
+	body {
+		background: #333;
+	}
+
+	.project {
+		background-color: #1f1f1f;
+		color: white;
+	}
+
+	.project header a {
+		text-decoration-color: white;
+	}
+
+	.project h3 {
+		color: white;
+	}
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+	.about hgroup h1 {
+		color: white;
+	}
+	.about hgroup p {
+		color: white;
+	}
+	.about > p {
+		color: white;
+	}
+	h2 {
+		color: white;
+	}
+	.about hgroup > p a {
+		color: white;
+	}
+}

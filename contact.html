@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sergey Brin portfolio - Contact me</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		/>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/header.css" />
+		<link rel="stylesheet" href="./styles/contact.css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; block-all-mixed-content; upgrade-insecure-requests;"
+		/>
+		<meta name="language" content="english" />
+		<meta
+			name="description"
+			content="This page allows you to contact me with a single simple form."
+		/>
+		<meta name="author" content="Sergey Brin" />
+
+		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content="Sergey Brin, portfolio,contact " />
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<div class="burger-menu-container">
+					<div class="burger-menu-bar"></div>
+					<div class="burger-menu-bar"></div>
+					<div class="burger-menu-bar"></div>
+				</div>
+				<div class="full-menu">
+					<ul>
+						<li><a href="./">Home</a></li>
+						<li><a href="./projects.html">Projects</a></li>
+						<li><a href="./resume.html">Resume</a></li>
+						<li><a href="./contact.html" class="active">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<h1>Contact me</h1>
+
+			<form>
+				<div class="user-informations">
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Your name"
+						required
+					/>
+
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Your email"
+						required
+					/>
+				</div>
+
+				<textarea
+					name="message"
+					id="message"
+					placeholder="Your message"
+					required
+				></textarea>
+
+				<button type="submit">Send your message</button>
+			</form>
+		</main>
+
+		<footer>
+			<p>©Sergey Brin - 2023</p>
+		</footer>
+		<script src="./js/menu.js"></script>
+	</body>
+</html>

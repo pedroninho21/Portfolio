@@ -1,0 +1,91 @@
+article {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin: 2em 0;
+}
+
+article header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+article header ul {
+	gap: 1em;
+}
+article header li {
+	filter: invert(38%) sepia(100%) saturate(5246%) hue-rotate(208deg)
+		brightness(104%) contrast(90%);
+	list-style: none;
+}
+
+article section h2 {
+	font-size: 1.8em;
+	line-height: 2em;
+}
+article section > div {
+	background-color: #0f71f2;
+	padding: 1em 0;
+}
+article section > div > p {
+	color: white;
+	text-align: justify;
+	padding: 0.5em 1.5em;
+	margin: 0;
+}
+
+article header h1 {
+	font-size: 2.2em;
+}
+
+article ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0 1.5em;
+	gap: 0.5em;
+}
+article section li {
+	padding: 0;
+	list-style: none;
+	border: 1px solid #181818;
+	color: #181818;
+	border-radius: 5em;
+	padding: 0.25em 0.75em;
+}
+
+@media only screen and (min-width: 768px) {
+	article section > div {
+		border-radius: 0.5em;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	article section li {
+		border: 1px solid white;
+		color: white;
+	}
+}
+
+@media (prefers-contrast: more) {
+	article header h1 {
+		color: black;
+	}
+	article header li {
+		filter: invert(0%) sepia(33%) saturate(9%) hue-rotate(200deg)
+			brightness(97%) contrast(102%);
+	}
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+	article header h1 {
+		color: white;
+	}
+	article header li {
+		filter: invert(97%) sepia(98%) saturate(10%) hue-rotate(192deg)
+			brightness(103%) contrast(102%);
+	}
+}
